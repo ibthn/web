@@ -31,53 +31,7 @@ document.querySelectorAll('.card').forEach(card => {
 
 
 
-
-
-  function togglePlay() {
-    const audio = document.getElementById('audio');
-    const playButton = document.getElementById('play-button');
-
-    if (audio.paused) {
-        audio.play();
-        playButton.classList.add('playing');
-    } else {
-        audio.pause();
-        playButton.classList.remove('playing');
-    }
-}
-
-// Ensure the icon changes back to play when the audio ends
-const audio = document.getElementById('audio');
-audio.addEventListener('ended', () => {
-    const playButton = document.getElementById('play-button');
-    playButton.classList.remove('playing');
-});
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -124,4 +78,29 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+
+
+
+
+
+
+  function togglePlay() {
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('play-button');
+
+    if (audio.paused) {
+        audio.play();
+        playButton.classList.add('playing');
+    } else {
+        audio.pause();
+        playButton.classList.remove('playing');
+    }
+}
+
+// Ensure the icon changes back to play when the audio ends
+const audio = document.getElementById('audio');
+audio.addEventListener('ended', () => {
+    const playButton = document.getElementById('play-button');
+    playButton.classList.remove('playing');
 });
